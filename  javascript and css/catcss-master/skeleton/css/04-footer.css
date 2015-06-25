@@ -1,0 +1,38 @@
+/* PHASE 4: Footer */
+footer {
+  background-color: white;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 898px;
+  margin: 0 auto;
+  height: 55px;
+  color: #aaa;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+
+}
+
+footer p {
+  line-height: 55px;
+  float: left;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.footer-list {
+  line-height: 55px;
+  float: right;
+}
+.footer-list li{
+  float: left;
+  padding-right: 20px;
+}
+
+.footer-list li a {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-list li a:hover {
+  color: black;
+}

@@ -1,0 +1,26 @@
+<h1>Update <%= @cat.name %>!</h1>
+
+<!--
+    <input type="text" value = "<%=@cat.name%>" name="cat[name]"><br>
+
+    <label for "cat_coat_color">Coat color</label>
+    <select name="cat[color]" id="cat_coat_color">
+      <option value = "<%=@cat.color%>"><%=@cat.color%></option>
+      <% %w(ginger yellow brown calico buff marmalade orange seal chocolate).each do |color| %>
+        <option value = "<%= color %>"> <%=color%> </option>
+      <% end %>
+    </select><br>
+    <%= radio_button_tag(@cat.sex, "M", checked = (@cat.sex == "M"), id: "cat_sex_male") %>
+    <label for="cat_sex_male">Male</label>
+    <%= radio_button_tag(@cat.sex, "F", checked = (@cat.sex == "F"), id: "cat_sex_female") %>
+    <label for="cat_sex_female">Female</label>
+    <br>
+
+    <input type="date" value="<%=@cat.birth_date%>" name="cat[birth_date]"><br>
+
+    <textarea cols="40" rows="5" name="cat[description]" value = "<%=@cat.description%>"></textarea><br> -->
+
+
+    <!-- <input type="submit" value="Edit Cat"> -->
+    <%= render "form", cat: @cat %>
+  </form>

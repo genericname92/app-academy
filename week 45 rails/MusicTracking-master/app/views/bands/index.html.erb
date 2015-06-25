@@ -1,0 +1,10 @@
+<h1>All the bands! </h1>
+<p>
+<%= link_to "Create a new band here!", new_band_url %>
+</p>
+<% Band.all.sort_by { |obj| obj.name }.each do |band| %>
+    <%= link_to band.name, band_url(band) %>
+    <%= button_to "Delete Band", band_url(band), method: :delete %>
+
+    <br>
+<% end %>

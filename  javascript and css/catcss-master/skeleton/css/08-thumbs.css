@@ -1,0 +1,22 @@
+/* PHASE 8: Thumbs */
+.profile-thumbs {
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+.profile-thumbs a {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: block;
+  float: left;
+  margin: 5px;
+}
+
+.thumb:before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: attr(title);
+}

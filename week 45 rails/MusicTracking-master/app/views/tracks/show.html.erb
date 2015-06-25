@@ -1,0 +1,6 @@
+<h1> These are the lyrics for <%= @track.name %> </h1>
+
+<%= @track.lyrics %>
+
+<%= link_to "edit this track", edit_track_url(@track) %>
+<%= link_to "Back to album", album_url(@track.album.id) %>

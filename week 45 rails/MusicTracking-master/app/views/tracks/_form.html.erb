@@ -1,0 +1,44 @@
+<% action = ( track.persisted? ? track_url(track) : tracks_url ) %>
+<% method = (track.persisted? ? :patch : :post ) %>
+<% button = (track.persisted? ? "Edit Track" : "Create Track") %>
+
+
+<form action = "<%= action %>" method = "post">
+    <input type="hidden" name = "_method" value = "<%= method %>">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%=form_authenticity_token%>">
+    <input type="hidden" name = track[album_id] value = "<%= album_id %>">
+    <label>Track name:
+      <input type="text" name = "track[name]" value = "<%= track.name %>"
+    </label>
+    <input type="submit" value = "<%= button %>">
+    <label>bonus
+      <input
+        type="radio"
+        name="track[track_bonus]"
+        value = "bonus"
+        <%= track.track_bonus == "bonus" ? "checked" : "" %>
+      </label>
+      <label>regular
+        <input
+          type="radio"
+          name="track[track_bonus]"
+          value = "regular"
+          <%= track.track_bonus == "regular" ? "checked" : "" %>
+      </label>
+
+    <br>
+    <br>
+
+    <label>lyrics
+      <input
+        type="textarea"
+        name = "track[lyrics]"
+        value =  "<%= track.lyrics %>">
+<% if track.album.nil? %>
+  <%= link_to "Back to all bands", bands_url %>
+  <% else %>
+    <%= link_to "Back to #{track.album.name}", album_url(track.album.id) %>
+<% end %>

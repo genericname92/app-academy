@@ -1,0 +1,45 @@
+<h1> <%= @user.username %> </h1>
+<%= render 'user_comments/comments', comments: @user.comments, user_id: @user_id %>
+
+<% if @public_goals.empty? %>
+  <ul>No Goals</ul>
+<% else %>
+  <ul>
+    <% @public_goals.each do |p_goal| %>
+      <li><%= p_goal.title %>
+          <% if current_user == @user %>
+            <%= button_to "Destroy Goal", checkpoint_url(p_goal), method: :delete %>
+            <%= button_to "Edit Goal", edit_checkpoint_url(p_goal), method: :get %>
+          <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<% if current_user == @user %>
+    <ul>
+      <% @private_goals.each do |p_goal| %>
+        <li> <%= p_goal.title %>
+            <%= button_to "Destroy Goal", checkpoint_url(p_goal), method: :delete %>
+            <%= button_to "Edit Goal", edit_checkpoint_url(p_goal), method: :get %>
+        </li>
+      <% end %>
+    </ul>
+    <hr>
+    <h2>Add a Goal</h2>
+    <br>
+    <form action="<%=checkpoints_url%>" method="post">
+      <input type="hidden" name="authenticity_token" value= "<%= form_authenticity_token %>">
+      <label>Title
+        <input type="text" name="checkpoint[title]" value= "">
+      </label>
+
+      <label>viewable
+        <select name="checkpoint[viewable]">
+          <option value="public">Public</option>
+          <option value="private">Private</option>
+        </select>
+      </label>
+      <br>
+      <input type="submit" value="Add Goal">
+    </form>
+<% end %>

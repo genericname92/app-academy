@@ -1,0 +1,25 @@
+<% action = (mode == 0 ) ? users_url : session_url %>
+<% submit_button = (mode == 0 ) ? "Sign up!" : "Sign in!" %>
+<% no_users = (mode == 0 ) ? @user.email : "" %>
+
+
+<form action= "<%= action  %>" method="POST">
+  <%= csrf_valid %>
+  <!-- <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%=form_authenticity_token%>"> -->
+<p>
+  <label>Email:
+  <input type="text" name = "user[email]" value = "<%= no_users %>">
+</label>
+</p>
+<p>
+<label>Password:
+  <input type="password" name = "user[password]">
+</label>
+</p>
+<input type="submit" value = "<%= submit_button %>">
+<br>
+<br>
+<%= link_to "Don't have an account? Sign up here!", new_user_url %>

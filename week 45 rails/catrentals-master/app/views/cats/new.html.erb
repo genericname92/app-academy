@@ -1,0 +1,26 @@
+<h1> Create a new cat! </h1>
+  <form class="cat-form" action= "<%= cats_url %>" method="post">
+
+    <!-- <input type="text" placeholder="Name" name="cat[name]"><br>
+    <label for "cat_coat_color">Coat color</label>
+
+    <select name="cat[color]" id="cat_coat_color">
+      <option></option>
+      <% %w(ginger yellow brown calico buff marmalade orange seal chocolate).each do |color| %>
+        <option value = "<%= color %>"> <%=color%> </option>
+      <% end %></select><br>
+
+    <input type="radio" name="cat[sex]" id="cat_sex_female" value="F">
+    <label for="cat_sex_female">Female</label>
+    <input type="radio" name="cat[sex]" id="cat_sex_male" value="M">
+    <label for="cat_sex_male">Male</label><br>
+
+
+    <input type="date" value="Birthdate" name="cat[birth_date]"><br>
+
+    <textarea cols="40" rows="5" name="cat[description]" placeholder="Description"></textarea><br> -->
+
+    <!-- <input type="submit" value="Create Cat"> -->
+
+    <%= render "form", cat: @cat %>
+  </form>

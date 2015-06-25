@@ -1,0 +1,33 @@
+<h1>Search!</h1>
+
+<!-- <form action="/users/search" method="GET">
+  <input
+    type="text"
+    name="query"
+    value="<%= @query %>">
+
+  <input type="submit" value="Search Users!">
+</form> -->
+
+<div class='users-search' data-current-user-id="<%= current_user.id %>" >
+  <input class='search-bar' type="text" name="query" value="">
+
+
+  <ul class="listed-users">
+    <% @users.each do |user| %>
+      <li>
+        <%= link_to user.username, user_url(user) %>
+        <%= render "follows/form", user: user %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+<script type="text/template" id="button_template">
+    <button type="button"
+      class="follow-toggle"
+      data-user-id="<%%= id %>"
+      data-initial-follow-state="<%%= follow_state %>">
+    </button>
+</script>

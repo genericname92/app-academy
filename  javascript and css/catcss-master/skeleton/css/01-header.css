@@ -1,0 +1,114 @@
+/* PHASE 1: Header */
+body {
+  font-family: Roboto;
+  font-size: 16 px;
+  font-weight: 400;
+  background-color: #eee;
+}
+
+.header {
+  background-color: red;
+  border-bottom: 1px solid #ccc;
+  z-index: 1;
+  position: relative;
+}
+
+.header-nav {
+  width: 900px;
+  height: 40px;
+  margin: auto;
+}
+
+.header-logo {
+  float: left;
+  line-height: 40px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  font-weight: 700;
+}
+
+.header-logo a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0 20px;
+}
+
+.header-list { float: right; }
+
+.header-list li {
+  float: left;
+  border-left: 1px solid white;
+  height: auto;
+  line-height: 40px;
+}
+
+.header h1:hover { background-color: black; }
+
+.header-list > li:hover { background-color: black; }
+
+.header-list > li > a {
+  color: white;
+  display: block;
+  padding: 0 20px;
+}
+
+.header-list li:last-child { border-right: 1px solid white; }
+
+.badge {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: black;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 14px;
+}
+
+#notifications {
+  position: relative;
+}
+
+#notifications ul {
+  position: absolute;
+  display: none;
+  top: 40px;
+  left: -1px;
+
+}
+
+.notification-comments li {
+  width: 230px;
+  clear: both;
+  background-color: white;
+  white-space: nowrap;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.notification-comments li:last-child {
+  border-right: 1px solid #ccc;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.notification-comments li a{
+  color: black;
+  font-size: 14px;
+  display: block;
+  padding-left: 20px;
+}
+
+.notification-comments li:hover {
+  background-color: #eee;
+}
+
+#notifications:hover .badge { background-color: red;}
+
+#notifications:hover .notification-comments {
+  display: block;
+  overflow: hidden;
+}

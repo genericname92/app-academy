@@ -1,0 +1,50 @@
+/* PHASE 6: Sidebar */
+.profile-picture a {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.profile-info {
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.profile-info h3 { font-size: 24px; }
+
+.profile-info p {
+  margin-top: -7px;
+  padding-bottom: 20px;
+}
+
+.profile-nav-list {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-nav-list li {
+  border-top: 1px solid #ccc;
+}
+
+.profile-nav-list li a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 4px;
+  color: black;
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.profile-nav-list li a:hover { background-color: #eee; }
+
+.profile-nav-list li:last-child { border-bottom: 1px solid #ccc; }

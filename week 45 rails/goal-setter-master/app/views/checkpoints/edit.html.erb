@@ -1,0 +1,17 @@
+<h1> Edit Goal </h1>
+
+<form action= "<%= checkpoint_url(@checkpoint) %>" method="post">
+  <input type="hidden" name="authenticity_token" value= "<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value = "patch">
+  <label>Title
+    <input type="text" name="checkpoint[title]" value= "">
+  </label>
+
+  <label>viewable
+    <select name="checkpoint[viewable]">
+      <option value="public">Public</option>
+      <option value="private">Private</option>
+    </select>
+  </label>
+  <br>
+  <input type="submit" value="Edit Goal">

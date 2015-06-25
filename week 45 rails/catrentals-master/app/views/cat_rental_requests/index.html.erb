@@ -1,0 +1,8 @@
+<h1> Cat Rentals <h1>
+
+
+<% @cat_rental_requests.each do |request| %>
+<ul>
+  <%=  link_to "@request.start_date, @request.end_date, @request.status", cat_cat_rental_request_url(reqeust) %>
+</ul>
+<% end %>

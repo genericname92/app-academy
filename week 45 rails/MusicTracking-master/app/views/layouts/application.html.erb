@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicSharingApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if logged_in? %>
+    <%= current_user.email + " is logged in!\n" %>
+    <%= button_to "Logout", session_url, method: "delete" %>
+    <br>
+    <%= link_to "Go back to user page", user_url(current_user) %>
+  <% else %>
+    <%= link_to "Log in here!", new_session_url %>
+    <%= link_to "Sign up here!", new_user_url %>
+  <% end %>
+  <br>
+  <%= link_to "Go to all bands", bands_url %>
+<%= yield %>
+
+
+</body>
+</html>

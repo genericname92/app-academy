@@ -1,0 +1,7 @@
+<h1><%= @cat.name%>'s page</h1>
+  <% @cat.attributes.each do |key, value| %>
+      <% next if key == "created_at" || key == "updated_at" %>
+      <%= key.to_s + " is " + value.to_s  %>
+    <br>
+  <% end %>
+  <%= "age is " + @cat.age.to_s %>

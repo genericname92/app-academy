@@ -1,0 +1,25 @@
+<%= render "shared/errors" %>
+<h1>Make a User!</h1>
+
+<form action="/users" method="POST">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <label>Username
+    <input type="text" name="user[user_name]" value="<%= @user.user_name %>"
+  </label>
+
+  <br>
+  <br>
+
+  <label>Password
+    <input type="password" name="user[password]">
+  </label>
+
+  <br>
+  <br>
+
+  <input type="submit" value="Make the User!">
+</form>

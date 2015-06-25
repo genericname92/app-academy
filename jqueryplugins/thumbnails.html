@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./thumbnails.js"></script>
+    <link rel="stylesheet" type="text/css"
+      href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" type="text/css" href="./thumbnails.css">
+    <title>Thumbnails</title>
+  </head>
+  <body>
+    <div class="thumbnails" data-gutter-images=".gutter-images">
+      <div class="active">
+        <img/>
+      </div>
+      <div class="gutter">
+        <a class="nav left" href="javascript:void(0)">&lt;</a>
+        <div class="gutter-images group">
+          <img
+            src="http://i2.kym-cdn.com/photos/images/facebook/000/581/526/3a7.jpg"/>
+          <img
+            src="http://runt-of-the-web.com/wordpress/wp-content/uploads/2013/11/doge-cookie.jpg"/>
+          <img
+            src="http://origin.funnymeme.com/wp-content/uploads/2014/02/Doge-meme-snoop-doge.jpg"/>
+          <img
+            src="http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png"/>
+          <img
+            src="http://i3.kym-cdn.com/photos/images/facebook/000/118/539/tumblr_lj4xh4rZOY1qduaebo1_500.jpg"/>
+
+          <img src="http://rs2img.memecdn.com/pokemon-memes_o_196937.jpg"/>
+          <img src="http://cdn.pokestache.com/2013/4/12/c8adad6094792f735b504057279c6aed.jpg"/>
+          <img src="http://www.readysettroll.com/articles/thumbnails/2372-10-of-the-greatest-pokemon-memes-ever.jpg"/>
+          <img src="http://cdn.pokestache.com/2013/4/12/00872f2cff1b204811d1f78f33c5b4ae.jpg"/>
+          <img src="http://rs1img.memecdn.com/pokemon-troll_o_228017.jpg"/>
+          <img src="http://img0.joyreactor.com/pics/post/funny-pictures-auto-professor-oak-pokemon-371273.jpeg"/>
+          <img src="http://img1.wikia.nocookie.net/__cb20120412012931/dragonball/images/2/26/Pokemon_meme.jpg"/>
+          <img src="http://rs2img.memecdn.com/why-is-brock-a-pokemon-trainer_o_2058943.jpg"/>
+          <img src="http://www.vgmemes.com/wp-content/uploads/2012/06/pokemon-creepy-stare.png"/>
+        </div>
+        <a class="nav right" href="javascript:void(0)">&gt;</a>
+      </div>
+    </div>
+
+    <script>
+    $(function(){
+      $('.thumbnails').thumbnails();
+    })
+    </script>
+  </body>
+</html>

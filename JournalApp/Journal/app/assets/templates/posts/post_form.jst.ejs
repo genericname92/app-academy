@@ -1,0 +1,14 @@
+<h1> This is an new or edit form </h1>
+
+<div class="errors"></div>
+
+<form class="formSubmit">
+<label>Title
+<input type="text" name="post[title]" value="<%= post.get("title") %>"></label>
+
+<label>Body
+<textarea name="post[body]"><%= post.get("body") %></textarea></label>
+
+<input  type="submit" value="Edit">
+
+</form>

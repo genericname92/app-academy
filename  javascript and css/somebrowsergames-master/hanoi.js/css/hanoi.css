@@ -1,0 +1,73 @@
+.name {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+
+.game .tower {
+  left: 300px;
+  top: 150px;
+}
+
+.tower {
+  display:block;
+  position: relative;
+  float: left;
+  height: 40px;
+  width: 300px;
+  background: brown;
+  margin-left: 20px;
+}
+
+.fatDisk {
+  display: block;
+  background: gray;
+  height: 30px;
+  width: 300px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+
+.midDisk {
+  display: block;
+  background: gray;
+  height: 30px;
+  width: 200px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+
+.smallDisk {
+  display: block;
+  background: gray;
+  height: 30px;
+  width: 100px;
+  margin-left: 90px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.bottomHeight {
+  position: absolute;
+  bottom: 40px;
+}
+
+.middleHeight {
+  position: absolute;
+  bottom: 100px;
+
+}
+
+.topHeight {
+  position: absolute;
+  bottom: 160px;
+}
+
+.clicked {
+  background: yellow;
+}

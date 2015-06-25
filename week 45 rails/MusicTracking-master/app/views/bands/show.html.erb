@@ -1,0 +1,12 @@
+<h1> This is <%= @band.name %>'s page! </h1>
+<h2> Here are the albums <%= @band.name %> has created </h2>
+<% @band.albums.each do |album| %>
+  <%= link_to album.name, album_url(album) %>
+  <%= button_to "Delete album", album_url(album), method: :delete %>
+  <br>
+<% end %>
+
+<%= link_to "Create an album!", new_band_album_url(@band.id) %>
+<%= link_to "Edit this band!", edit_band_url(@band) %>
+
+<%= link_to "All bands", bands_url %>
